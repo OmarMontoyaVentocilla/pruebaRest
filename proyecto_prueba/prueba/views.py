@@ -8,7 +8,7 @@ import datetime
 
 class MiVistaSet(viewsets.ViewSet):
     
-
+    ##LE PASO LOS DATOS QUE RECIBE "MiSerializer" y lo devuelvo como json
     def list(self, request):
         hora=datetime.datetime.now().isoformat()
         yourdata= [{"id": 1, "hora_actual": hora}]
