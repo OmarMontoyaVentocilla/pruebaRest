@@ -6,10 +6,10 @@ from .serializers import MiSerializer
 from rest_framework import  serializers
 import datetime
 
-class MiVista(viewsets.ViewSet):
+class MiVistaSet(viewsets.ViewSet):
     
 
-    def get(self, request):
+    def list(self, request):
         hora=datetime.datetime.now().isoformat()
         yourdata= [{"id": 1, "hora_actual": hora}]
         serializer = MiSerializer(yourdata, many=True)
